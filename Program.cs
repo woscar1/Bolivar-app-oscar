@@ -12,6 +12,11 @@ var app = builder.Build();
 
 app.UseCors(builder=> builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:5175"));
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.MapFallbackToController("Index", "Fallback");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

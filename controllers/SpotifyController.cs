@@ -33,6 +33,7 @@ namespace API.controllers
         [HttpGet("{id}")]
         public ActionResult <IEnumerable<SpotifyList>> GetUser(string id)
         {
+            Conection.GetTokenAsync();
             return Conection.TxtSearch_SpotifyList(id);
         }     
     }

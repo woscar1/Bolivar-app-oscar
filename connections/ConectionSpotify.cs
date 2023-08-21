@@ -58,9 +58,8 @@ namespace API.conectionsSpotify
         /// <param name="searchWord"> palabra para buscar</param>
         /// <returns></returns>
         public static SpotifyResult SearchSpotify(string searchWord)
-        {
-            
-            var client = new RestClient("https://api.spotify.com/v1/search?offset=0&limit=7");
+        {            
+            var client = new RestClient("https://api.spotify.com/v1/search?offset=0&limit=9");
             client.AddDefaultHeader("Authorization", $"Bearer {token.access_token}");
             var request = new RestRequest($"?q={searchWord}&type=artist,album,track", Method.Get);
             var response = client.Execute(request);

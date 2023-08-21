@@ -15,4 +15,11 @@ public class testclass
         Assert.NotEmpty((System.Collections.IEnumerable)Conection.GetTokenAsync());        
     }
 
+    [Fact]
+    public void TestGetListSpotify()
+    {
+        Assert.NotEmpty((System.Collections.IEnumerable)Conection.SearchSpotify("could"));        
+    }
+
+
 }
