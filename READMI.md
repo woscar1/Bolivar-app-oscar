@@ -1,7 +1,9 @@
 CONSTRUCTORA BOLIVAR 
 
-La imagen de docker se creo y para correrla es con el siguiente comando 
+La imagen de docker se creo y para correrla es con el siguiente comando: 
 docker run -p 5000:5000 -d -e ASPNETCORE_URLS=http://+:5000 woscar/bolivarapp:latest
+
+luego ingresar a la aplicación por http://localhost:5000/
 
 para ingresar al login con las credenciales 
 usuario :  3ba79cb151694effaed0fe412c708a13
